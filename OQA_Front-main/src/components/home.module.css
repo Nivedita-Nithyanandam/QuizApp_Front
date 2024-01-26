@@ -1,0 +1,331 @@
+
+.homebg
+{ 
+    display: grid;
+    width: 100%;
+    min-height: 120vh;
+    background-color: #f0f8ff;
+    /* background-repeat: repeat-y;
+    background-size: cover;
+    background-image: url('https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?auto=format&fit=crop&q=80&w=2800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+    /* overflow-y: scroll; */
+    box-sizing: border-box;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(3,1fr);
+    grid-template-areas:
+    "txtarea card1"
+    "txtarea card2"
+    "txtarea card3"
+}
+
+
+@media only screen and (max-width:1250px)
+{
+    .homebg
+    {
+        display: grid;
+        width: 100%;
+        min-height: 120vh;
+        background-color: aliceblue;
+        /* background-repeat: repeat-y;
+        background-size: cover;
+        background-image: url('https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?auto=format&fit=crop&q=80&w=2800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:repeat(4,0.7fr);
+        grid-template-areas:
+            "txtarea"
+            "card1"
+            "card2"
+            "card3"
+    }
+
+    .textarea
+    {
+        margin-left:20px;
+        margin-right: 20px;
+    }
+
+    .cardTextField
+    {
+    
+    z-index: 3;
+    position: relative;
+    margin: -90% auto;
+    background-color: aliceblue;
+    color:black;
+    border-width: 0px;
+    border-style: outset;
+    max-width: 70%;
+    height: 0%;
+    box-shadow: 0 30px 200px;
+    overflow: hidden;
+    transform: translateZ(50px);
+    }
+
+    .card
+    {
+        width: 600px !important;
+        height: 200px;
+        z-index: 0;
+        margin:50px auto;
+        box-shadow: 0px 20px 1000px black;
+        transition-property: transform;
+        transform-style: preserve-3d;
+        transition-timing-function: ease-in-out;
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width:750px)
+{
+    .card
+    {
+        width:250px !important;
+        height: 200px;
+        z-index: 0;
+        box-shadow: 0px 20px 100px;
+        transition-property: transform;
+        transform-style: preserve-3d;
+        transition-timing-function: ease-in-out;
+        display: block;
+        padding: 0px;
+    }
+
+    .cardTextField
+    {
+        
+        z-index: 3;
+        position: relative;
+        height: 100% !important;
+        margin-top:-50% !important;
+        margin-right:-20% !important;
+    }
+} 
+
+.card1
+{
+    grid-area: card1;
+}
+.card2
+{
+    grid-area: card2;
+}
+.card3
+{
+    grid-area: card3;
+
+}
+.card4
+{
+    grid-area: card4;
+
+}
+
+.textarea
+{
+    grid-area: txtarea;
+    color:black;
+    font-weight: 800;
+    margin-left: 20px;
+
+
+}
+
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.card
+{
+    width:600px;
+    height: 200px;
+    z-index: 0;
+    margin:50px auto;
+    box-shadow: 10px 15px 50px black;
+    transition-property: transform;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in-out;
+    display: block;
+}
+
+.cardImgField
+{
+    position: relative;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+}
+.cardImg
+{
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    
+    margin: 0px auto;
+}
+.cardTextField
+{
+    
+    z-index: 3;
+    position: relative;
+    margin: -20% auto;
+    background-color: aliceblue;
+    color:black;
+    border-width: 0px;
+    border-style: outset;
+    max-width: 70%;
+    height: 0%;
+    box-shadow: 0 30px 200px;
+    overflow: hidden;
+    transform: translateZ(50px);
+    
+}
+
+
+.card:hover .cardTextField 
+{
+    height: 70%;
+    border-width: 1px;
+    transition-duration: 0.3s;
+
+}
+
+.cardTextTitle
+{
+    font-weight: 900;
+    color:rgb(0, 149, 255)
+}
+
+.cardTextContent
+{
+    color:black;
+}
+#login
+{
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(0, 149, 255);
+    border: none;
+    border-radius: 50px;
+    color:aliceblue;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px black;
+    margin: auto auto;
+    text-decoration: none;
+
+}
+
+#login:active
+{
+    box-shadow: 0px 0px 2px black;
+    transform: scaleY(8px);
+    
+}
+
+
+.subHeadings
+{
+    color: rgb(0, 149, 255);
+    box-shadow: 0 2px 15px rgb(0, 149, 255);
+    clip-path: inset(-100px 0px 0px 0px);
+    padding-top: 10px;
+}
+#subHeadings
+{
+    background-image: linear-gradient(60deg, #e6ec15, #f1ca00, #f6a700, #f68300, #f15c00, #ed5e00, #0400ea, #00c7e6, #007ede, #c5b200, #96d700, #10f920);
+    /* background-image:radial-gradient(circle, #ffc107, #ffeb3b, #e91e63, #f44336, #9c27b0, #3f51b5, #00bcd4, #4caf50, #8bc34a, #03a9f4) ; */
+    background-clip: text;
+    color: transparent;
+    background-size: 100px 100px;
+    animation: bgAnimatedGradient 15s infinite;
+    animation-timing-function: ease-in-out;
+    
+
+   
+}
+
+
+@keyframes bgAnimatedGradient {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%
+    {
+        background-position: 100% 0;
+    }
+    
+}
+
+#textFieldLogo
+{
+   height: auto;
+   width: auto;
+}
+
+/* #textFieldLogo
+{
+   
+    animation-name: homePageLogoAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    
+}
+
+@keyframes homePageLogoAnimation {
+    0%{
+        width: 50px;
+        height: 55px;
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        z-index: 10;
+    }
+
+    25%{
+        width: 75px;
+        height: 80px;
+        z-index: 10;
+    }
+
+    50%{
+        width: 100px;
+        height: 105px;
+        z-index: 10;
+    }
+    75%{
+        width: 125px;
+        height: 130px;
+        z-index: 10;
+    }
+    100%{
+        width: 150px;
+        height: 155px;
+        z-index: 10;
+        position: absolute;
+        transform: rotate(-360deg);
+        
+    }
+
+}
+
+.smallTextArea
+{
+    margin-top: 200px;
+
+} */
+
+
+

@@ -1,0 +1,144 @@
+.container
+{
+    min-height: 100vh;
+
+    display:grid;
+    background-color: aliceblue;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'details scores scores';
+}
+#thTr{
+    position: sticky !important;
+    top:0px !important;
+}
+@media screen and (max-width:900px) {
+    .container
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'details'
+        'scores';
+    }
+
+    .scores
+    {
+        margin: 0px;
+    }
+    .scrollableTable
+    {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        max-height: 329px;
+        overflow-y: scroll;
+    }
+    #thTr{
+        position: sticky !important;
+        top:0px !important;
+    }
+
+}
+
+.container h1
+{
+    color : rgb(0,149,255);
+}
+
+.details
+{
+    text-align: center;
+    grid-area: details;
+    
+}
+
+.detailsTable
+{
+    box-shadow: 1px 5px 20px black;
+    background-color: aliceblue;
+    border-radius: 15px;
+    margin: 5px 5px;
+    margin-top: 50px;
+
+}
+
+.details label
+{
+    color: black;
+    font-weight: 800;
+}
+
+.details  input
+{
+    outline: none;
+    border: 2px solid rgb(0,149,255);
+    height: 20px;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+#confirmBtn
+{
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(0,149,255);
+    border: none;
+    border-radius: 50px;
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px black;
+    margin: auto auto;
+    text-decoration: none;
+
+}
+
+#confirmBtn:active
+{
+    box-shadow: 0px 0px 2px black;
+    transform: scaleY(8px);
+    
+}
+
+#detailsTable
+{
+    margin : auto auto;
+}
+
+.scores
+{
+    grid-area: scores;
+    text-align: center;
+    
+}
+
+.scrollableTable
+{
+    max-height: 329px;
+    overflow-y: scroll;
+}
+
+
+.scoreTable
+{
+    margin:auto auto;
+    border-collapse: collapse;
+   
+}
+
+.scoreTable th
+{
+    background-color: rgb(0,149,255);
+    
+}
+
+.scoreTable tr
+{
+    background-color: white;
+}
+
+.scoreTable td
+{
+    border:2px solid rgb(0,149,255);
+}

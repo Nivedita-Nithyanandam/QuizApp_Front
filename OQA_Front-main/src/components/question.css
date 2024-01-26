@@ -1,0 +1,99 @@
+.options
+{
+    display: grid;
+    margin: auto auto;
+    width: 800px;
+    margin-top:50px;
+    margin-bottom: 30px;
+    row-gap: 1em;
+    column-gap: 100px;
+    text-align: start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    'option1 option2'
+    'option3 option4';
+    padding-left: 100px;
+
+}
+
+@media only screen and (max-width:1000px) {
+    .options{
+        display: grid;
+        margin: auto auto;
+        width: 50vw;
+        margin-top:50px;
+        margin-bottom: 30px;
+        row-gap: 1em;
+        column-gap: 10px;
+        text-align: start;
+        padding-left: 0px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        'option1' 
+        'option2'
+        'option3' 
+        'option4';
+        
+
+    }
+
+    .options input
+    {
+        margin-right: 10px;
+    }
+}
+
+.option1
+{
+    grid-area: option1;
+}
+.option2
+{
+    grid-area: option2;
+
+}
+.option3
+{
+    grid-area: option3;
+
+}
+.option4
+{
+    grid-area: option4;
+
+}
+
+.options input
+{
+    margin-right: 10px;
+}
+
+.options
+{
+    margin-left: auto;
+}
+
+
+
+#btn
+{
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(0,149,255);
+    border: none;
+    border-radius: 50px;
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px black;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+#btn:active
+{
+    
+    box-shadow: 0px 0px 3px black;
+    transform: scaleY(7px);
+}

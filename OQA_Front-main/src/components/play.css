@@ -1,0 +1,187 @@
+*
+{
+    padding:0px;
+}
+body
+{
+    perspective: 100px;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh !important;
+    background-color: aliceblue;
+
+}
+
+.card
+{
+    width:300px;
+    height: 200px;
+    z-index: 0;
+    margin:50px auto;
+    cursor: pointer;
+    box-shadow: 5px 5px 100px black;
+    transition-property: transform;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in-out;
+    display: block;
+}
+
+.cardAdmin
+{
+    width:300px;
+    height: 200px;
+    z-index: 0;
+    margin:50px auto;
+    cursor: pointer;
+    box-shadow: 0px 20px 1000px black;
+    transition-property: transform;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in-out;
+    display: block;
+}
+#cardHide
+{
+    display: none;
+}
+
+#cardAdmin
+{
+    width:300px;
+    height: 200px;
+    z-index: 0;
+    margin:50px auto;
+    cursor: pointer;
+    box-shadow: 0px 20px 1000px;
+    transition-property: transform;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in-out;
+    display: block;
+}
+
+.card .card-text-field{
+    pointer-events: none;
+}
+
+@media only screen and (max-width:500px)
+{
+    .card
+    {
+        width: 300px;
+    }
+
+    .card-text-field
+    {
+        
+        z-index: 3;
+        position: relative;
+        height: 70% !important;
+        margin-top:-40% !important;
+        margin-right:-10% !important;
+    }
+    .card-text-fieldAdmin
+    {
+        
+        z-index: 3;
+        position: relative;
+        height: 70% !important;
+        margin-top:-50% !important;
+        margin-right:-20% !important;
+    }
+
+} 
+
+.card-img-field
+{
+    position: relative;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+}
+
+.card-img-fieldAdmin
+{
+    position: relative;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+
+    background-image: url('https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-add-icon-png-image_925895.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.card-img
+{
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    
+    margin: 0px auto;
+}
+.card-text-field
+{
+    
+    z-index: 3;
+    position: relative;
+    margin: -40% auto;
+    background-color: white;
+    border-width: 0px;
+    border-style: outset;
+    max-width: 70%;
+    height: 0%;
+    box-shadow: 0 30px 200px;
+    overflow: hidden;
+    transform: translateZ(50px);
+    text-align: center
+    ;
+}
+.card-text-fieldAdmin
+{
+    
+    z-index: 3;
+    position: relative;
+    margin: -40% auto;
+    background-color: white;
+    border-width: 0px;
+    border-style: outset;
+    max-width: 70%;
+    height: 0%;
+    box-shadow: 0 30px 200px;
+    overflow: hidden;
+    transform: translateZ(50px);
+    text-align: center
+    ;
+}
+
+
+.card:hover .card-text-field 
+{
+    height: 70%;
+    border-width: 1px;
+    transition-duration: 0.3s;
+
+}
+
+.cardAdmin:hover .card-text-fieldAdmin
+{
+    height: 70%;
+    border-width: 1px;
+    transition-duration: 0.3s;
+
+}
+
+.card-text-title
+{
+    font-weight: 800;
+    text-align: center;
+    color: rgb(0,149,255);
+}
+

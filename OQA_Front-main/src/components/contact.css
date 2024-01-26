@@ -1,0 +1,46 @@
+.contactContainer
+{
+    text-align: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+    padding-top: 100px;
+}
+.contactContent{
+    box-shadow: 1px 5px 20px black;
+    width: 350px;
+    margin: auto auto;
+    height: 400px;
+    margin-top: 70px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+#tableContact
+{
+    margin: auto auto;
+}
+
+#tableContact label
+{
+    color: black;
+    font-weight: 800;
+}
+
+#tableContact  input
+{
+    outline: none;
+    border: 2px solid rgb(0,149,255);
+    height: 20px;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+#tableContact  textarea
+{
+    outline: none;
+    border: 2px solid rgb(0,149,255);
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
